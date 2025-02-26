@@ -6,14 +6,13 @@ resource "aws_instance" "catalogue" {
   tags = {
     Name = "catalogue"
   }
-  connection {
-    type     = "ssh"
-    user     = "ec2-user"
-    password = "DevOps321"
-    host     = self.public_ip
-  }
-
   provisioner "remote-exec" {
+    connection {
+      type     = "ssh"
+      user     = "ec2-user"
+      password = "DevOps321"
+      host     = self.public_ip
+    }
     inline = [
       "pip3.11 install ansible",
       "ansible-pull -i localhost, -U https://github.com/mas123shaik/mas_roboshop_ansible roboshop.yml -e component_name=catalogue -e env=dev",
