@@ -1,7 +1,7 @@
 resource "aws_instance" "frontend" {
   ami           = "ami-09c813fb71547fc4f"
   instance_type = "t3.small"
-  vpc_security_group_ids = ["sg-0f9f0f43cbf1baaf8"]
+  vpc_security_group_ids = ["sg-0740e8c441e48cb53"]
 
   tags = {
     Name = "frontend"
@@ -15,7 +15,7 @@ resource "aws_instance" "frontend" {
     }
     inline = [
       "pip3.11 install ansible",
-      "ansible-pull -i localhost, -U https://github.com/raghudevopsb83/roboshop-ansible roboshop.yml -e component_name=frontend -e env=dev",
+      "ansible-pull -i localhost, -U https://github.com/mas123shaik/mas_roboshop_ansible roboshop.yml -e component_name=frontend -e env=dev",
     ]
   }
 }
