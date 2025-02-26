@@ -6,7 +6,7 @@ resource "aws_instance" "catalogue" {
   tags = {
     Name = "catalogue"
   }
-  provisioner "remote-exec" {
+  /*provisioner "remote-exec" {
     connection {
       type     = "ssh"
       user     = "ec2-user"
@@ -17,7 +17,7 @@ resource "aws_instance" "catalogue" {
       "pip3.11 install ansible",
       "ansible-pull -i localhost, -U https://github.com/mas123shaik/mas_roboshop_ansible roboshop.yml -e component_name=catalogue -e env=dev",
     ]
-  }
+  }*/
 }
 resource "aws_route53_record" "catalogue" {
   zone_id = "Z02101962RY3FU3U9KSR5"
@@ -25,4 +25,18 @@ resource "aws_route53_record" "catalogue" {
   type    = "A"
   ttl     = 10
   records = [aws_instance.frontend.private_ip]
+}
+resource "null_resource" "catalogue" {
+  provisioner "remote-exec" {
+    connection {
+      type     = "ssh"
+      user     = "ec2-user"
+      password = "DevOps321"
+      host     = aws_instance.catalogue.private_ip
+    }
+    inline = [
+      "sudo pip3.11 install ansible",
+      "ansible-pull -i localhost, -U https://github.com/mas123shaik/mas_roboshop_ansible roboshop.yml -e component_name=catalogue -e env-dev",
+    ]
+  }
 }
