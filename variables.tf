@@ -1,8 +1,8 @@
-variable "instances" {}
+/*variable "instances" {}
 variable "zone_id" {}
 variable "env" {}
-variable "vpc_security_group_ids" {}
-/*variable "vpc_security_group_ids" {
+variable "vpc_security_group_ids" {}*/
+variable "vpc_security_group_ids" {
   default = ["sg-0740e8c441e48cb53"]
 }
 variable "instances" {
@@ -26,4 +26,4 @@ variable "zone_id" {
 }
 variable "env" {
   default = "dev"
-}*/
+}
