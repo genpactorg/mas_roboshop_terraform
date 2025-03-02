@@ -15,11 +15,7 @@ instances = {
     ami_id = "ami-09c813fb71547fc4f"
     instance_type = "t3.small"
   }
-  mysql = {
-    ami_id = "ami-09c813fb71547fc4f"
-    instance_type = "t3.small"
-  }
-  rabbitmq = {
+  cart = {
     ami_id = "ami-09c813fb71547fc4f"
     instance_type = "t3.small"
   }
@@ -27,11 +23,15 @@ instances = {
     ami_id = "ami-09c813fb71547fc4f"
     instance_type = "t3.small"
   }
-  cart = {
+  shipping = {
     ami_id = "ami-09c813fb71547fc4f"
     instance_type = "t3.small"
   }
-  shipping = {
+  mysql = {
+    ami_id = "ami-09c813fb71547fc4f"
+    instance_type = "t3.small"
+  }
+  rabbitmq = {
     ami_id = "ami-09c813fb71547fc4f"
     instance_type = "t3.small"
   }
