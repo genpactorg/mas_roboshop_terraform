@@ -14,4 +14,4 @@ instances = {
 }
 zone_id = "Z02101962RY3FU3U9KSR5"
 env = "prod"
-vpc_security_group_ids = ["sg-0740e8c441e48cb53"]
+vpc_security_group_ids = ["sg-03d4ba2febf49934e"]
