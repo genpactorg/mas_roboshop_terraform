@@ -15,9 +15,9 @@ instances = {
   #   ami_id = "ami-09c813fb71547fc4f"
   #   instance_type = "t3.small"
   # }
-  # cart = {
-  #   ami_id = "ami-09c813fb71547fc4f"
-  #   instance_type = "t3.small"
+  cart = {
+    ami_id = "ami-09c813fb71547fc4f"
+    instance_type = "t3.small"
   # }
   # user = {
   #   ami_id = "ami-09c813fb71547fc4f"
@@ -35,10 +35,10 @@ instances = {
   #   ami_id = "ami-09c813fb71547fc4f"
   #   instance_type = "t3.small"
   # }
-  payment = {
-    ami_id = "ami-09c813fb71547fc4f"
-    instance_type = "t3.small"
-  }
+  # payment = {
+  #   ami_id = "ami-09c813fb71547fc4f"
+  #   instance_type = "t3.small"
+  # }
 }
 zone_id = "Z06398542K2UFV583KXS5"
 env = "dev"
