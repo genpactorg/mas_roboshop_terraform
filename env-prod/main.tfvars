@@ -12,6 +12,6 @@ instances = {
     instance_type = "t3.small"
   }
 }
-zone_id = "Z02101962RY3FU3U9KSR5"
+zone_id = "Z06398542K2UFV583KXS5"
 env = "prod"
 vpc_security_group_ids = ["sg-03d4ba2febf49934e"]

@@ -28,7 +28,7 @@ resource "aws_route53_record" "record" {
   records = [aws_instance.instance[each.key].private_ip]
 }*/
 /*resource "aws_route53_record" "catalogue" {
-  zone_id = "Z02101962RY3FU3U9KSR5"
+  zone_id = "Z06398542K2UFV583KXS5"
   name    = "catalogue-dev"
   type    = "A"
   ttl     = 10
