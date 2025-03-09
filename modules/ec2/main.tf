@@ -2,6 +2,9 @@ resource "aws_instance" "instance" {
   ami                    = var.ami_id
   instance_type          = var.instance_type
   vpc_security_group_ids = var.vpc_security_group_ids
+  root_block_device {
+    volume_size = var.root_volume_size
+  }
 
   tags = {
     Name = var.name
@@ -33,7 +36,7 @@ resource "null_resource" "catalogue" {
 
     inline = [
       "sudo pip3.11 install ansible hvac",
-      "ansible-pull -i localhost, -U https://github.com/mas123shaik/mas_roboshop_ansible.git roboshop.yml -e component_name=${var.name} -e env=${var.env} -e vault_token=${var.vault_token}",
+      "ansible-pull -i localhost, -U https://github.com/mas123shaik/mas_roboshop_ansible.git roboshop.yml -e component_name=${var.ansible_role} -e env=${var.env} -e vault_token=${var.vault_token}",
     ]
   }
 }
