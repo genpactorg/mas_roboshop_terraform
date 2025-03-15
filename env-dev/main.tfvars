@@ -1,5 +1,5 @@
 instances = {
-  frontend = {
+  /*frontend = {
     ami_id        = "ami-09c813fb71547fc4f"
     instance_type = "t3.small"
     ansible_role  = "frontend-docker"
@@ -54,9 +54,21 @@ instances = {
     instance_type = "t3.small"
     ansible_role  = "payment-docker"
     root_volume_size = 30
+  }*/
+}
+eks = {
+  main = {
+    subnets     = ["subnet-0e39146f94b13662c", "subnet-04c59eeae941df983"]
+    eks_version = 1.32
+    node_groups = {
+      main = {
+        min_nodes      = 1
+        max_nodes      = 10
+        instance_types = ["t3.medium", "t3.large"]
+      }
+    }
   }
 }
 zone_id = "Z06398542K2UFV583KXS5"
 env = "dev"
-#vpc_security_group_ids = ["sg-0740e8c441e48cb53"]
 vpc_security_group_ids = ["sg-03d4ba2febf49934e"]

@@ -11,6 +11,14 @@ module "ec2" {
   ansible_role           = lookup(each.value, "ansible_role", each.key)
   root_volume_size       = each.value["root_volume_size"]
 }
+module "eks" {
+  for_each    = var.eks
+  source      = "./modules/eks"
+  env         = var.env
+  eks_version = each.value["eks_version"]
+  subnets     = each.value["subnets"]
+  node_groups = each.value["node_groups"]
+}
 /*resource "aws_instance" "instance" {
   for_each = var.instances
   ami           = each.value["ami_id"]
