@@ -1,5 +1,5 @@
 module "ec2" {
-  for_each = var.instances
+  for_each = var.db_instances
   source = "./modules/ec2"
   ami_id = each.value["ami_id"]
   env    = var.env
