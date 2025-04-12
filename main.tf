@@ -18,7 +18,10 @@ module "eks" {
   eks_version = each.value["eks_version"]
   subnets     = each.value["subnets"]
   node_groups = each.value["node_groups"]
+  addons      = each.value["addons"]
+  access      = each.value["access"]
 }
+
 /*resource "aws_instance" "instance" {
   for_each = var.instances
   ami           = each.value["ami_id"]

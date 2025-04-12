@@ -67,6 +67,21 @@ eks = {
         instance_types = ["t3.medium", "t3.large"]
       }
     }
+
+    addons = {
+      #metrics-server = {}
+      eks-pod-identity-agent = {}
+    }
+
+    access = {
+      workstation = {
+        role                    = "arn:aws:iam::253490775871:role/workstation-role"
+        kubernetes_groups       = []
+        policy_arn              = "arn:aws:eks::aws:cluster-access-policy/AmazonEKSClusterAdminPolicy"
+        access_scope_type       = "cluster"
+        access_scope_namespaces = []
+      }
+    }
   }
 }
 zone_id = "Z06398542K2UFV583KXS5"
