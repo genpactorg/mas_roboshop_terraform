@@ -11,7 +11,7 @@ db_instances = {
     ansible_role  = "catalogue-docker"
     root_volume_size = 30
   }*/
-  mongodb = {
+  /*mongodb = {
     ami_id        = "ami-09c813fb71547fc4f"
     instance_type = "t3.small"
     root_volume_size = 20
@@ -20,7 +20,7 @@ db_instances = {
     ami_id        = "ami-09c813fb71547fc4f"
     instance_type = "t3.small"
     root_volume_size = 20
-  }
+  }*/
  /* cart = {
     ami_id        = "ami-09c813fb71547fc4f"
     instance_type = "t3.small"
@@ -39,16 +39,16 @@ db_instances = {
     ansible_role  = "shipping-docker"
     root_volume_size = 30
   }*/
-  mysql = {
+  /*mysql = {
     ami_id        = "ami-09c813fb71547fc4f"
     instance_type = "t3.small"
     root_volume_size = 20
-  }
-  rabbitmq = {
+  }*/
+  /*rabbitmq = {
     ami_id        = "ami-09c813fb71547fc4f"
     instance_type = "t3.small"
     root_volume_size = 20
-  }
+  }*/
   /*payment = {
     ami_id        = "ami-09c813fb71547fc4f"
     instance_type = "t3.small"
