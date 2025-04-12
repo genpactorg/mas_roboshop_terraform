@@ -73,7 +73,7 @@ eks = {
       eks-pod-identity-agent = {}
     }
 
-    access = {
+ /*   access = {
       workstation = {
         role                    = "arn:aws:iam::253490775871:role/workstation-role"
         kubernetes_groups       = []
@@ -81,7 +81,7 @@ eks = {
         access_scope_type       = "cluster"
         access_scope_namespaces = []
       }
-    }
+    }*/
   }
 }
 zone_id = "Z06398542K2UFV583KXS5"
