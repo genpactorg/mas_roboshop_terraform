@@ -57,7 +57,7 @@ resource "null_resource" "catalogue" {
     }
     inline = [
       "sudo pip3.11 install ansible",
-      "ansible-pull -i localhost, -U https://github.com/mas123shaik/mas_roboshop_ansible roboshop.yml -e component_name=catalogue -e env=dev",
+      "ansible-pull -i localhost, -U https://github.com/genpactorg/mas_roboshop_ansible roboshop.yml -e component_name=catalogue -e env=dev",
     ]
   }
 }*/

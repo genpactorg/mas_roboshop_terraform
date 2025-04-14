@@ -41,7 +41,7 @@ jobs:
 #        - name: Check out repository code
 #          uses: actions/checkout@v4
 #          with:
-#            repository: mas123shaik/mas_roboshop_helm
+#            repository: genpactorg/mas_roboshop_helm
 #            path: helm
 #        - name: Helm Install
 #          run: |
