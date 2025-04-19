@@ -37,7 +37,7 @@ resource "aws_eks_addon" "addons" {
 }
 
 
-/*resource "aws_eks_access_entry" "main" {
+resource "aws_eks_access_entry" "main" {
   for_each          = var.access
   cluster_name      = aws_eks_cluster.main.name
   principal_arn     = each.value["role"]
@@ -55,7 +55,7 @@ resource "aws_eks_access_policy_association" "main" {
     type       = each.value["access_scope_type"]
     namespaces = each.value["access_scope_namespaces"]
   }
-}*/
+}
 
 /*resource "aws_eks_pod_identity_association" "external-dns" {
   cluster_name    = aws_eks_cluster.main.name
