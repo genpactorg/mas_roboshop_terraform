@@ -15,6 +15,7 @@ resource "null_resource" "metrics-server" {
   }
 }
 
+
 resource "null_resource" "argocd" {
   depends_on = [null_resource.kubeconfig]
 
@@ -26,5 +27,4 @@ kubectl patch svc argocd-server -n argocd --patch '{"spec": {"type": "LoadBalanc
 EOF
   }
 }
-
 
